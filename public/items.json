@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Vintage Camera Pro",
+    "description": "A classic 1960s film camera with leather grip and working lens, perfect for collectors and retro lovers.",
+    "currentBidPrice": "$280",
+    "timeLeft": "4h 20m",
+    "bidsCount": 11,
+    "image": "https://i.ibb.co.com/jZzwP66K/Bid1-min.png"
+  },
+  {
+    "id": 2,
+    "title": "Acoustic Guitar Deluxe",
+    "description": "Beautifully crafted acoustic guitar made from mahogany wood, offering warm sound and smooth playability.",
+    "currentBidPrice": "$450",
+    "timeLeft": "1d 2h",
+    "bidsCount": 22,
+    "image": "https://i.ibb.co.com/XZTGbvNB/Bid2-min.png"
+  },
+  {
+    "id": 3,
+    "title": "Gaming Laptop X15",
+    "description": "High-performance gaming laptop with RGB keyboard, 16GB RAM, and NVIDIA graphics for smooth gameplay.",
+    "currentBidPrice": "$920",
+    "timeLeft": "6h 50m",
+    "bidsCount": 34,
+    "image": "https://i.ibb.co.com/zHTYqB5B/Bid3-min.png"
+  },
+  {
+    "id": 4,
+    "title": "Smart Watch Nova",
+    "description": "Modern smartwatch with fitness tracking, heart rate monitor, and AMOLED display, compatible with all devices.",
+    "currentBidPrice": "$190",
+    "timeLeft": "3h 10m",
+    "bidsCount": 16,
+    "image": "https://i.ibb.co.com/212kHcJG/Bid4-min.png"
+  },
+  {
+    "id": 5,
+    "title": "Wooden Chair Classic",
+    "description": "Handmade oak wood chair with elegant finish, perfect for dining or reading corners.",
+    "currentBidPrice": "$120",
+    "timeLeft": "9h 25m",
+    "bidsCount": 7,
+    "image": "https://i.ibb.co.com/qYMkDGbz/Bid5-min.png"
+  },
+  {
+    "id": 6,
+    "title": "Antique Book Set",
+    "description": "Collection of rare vintage books with leather covers, showcasing beautiful golden engravings.",
+    "currentBidPrice": "$260",
+    "timeLeft": "2d 5h",
+    "bidsCount": 19,
+    "image": "https://i.ibb.co.com/Nd8HfxHL/Bid6-min.png"
+  }
+]
