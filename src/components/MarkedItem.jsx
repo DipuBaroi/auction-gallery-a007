@@ -3,7 +3,7 @@ import { RxCross2 } from "react-icons/rx";
 
 const MarkedItem = ({marked, handldeRemoveFavourite}) => {
     return (
-        <div className='flex justify-between items-center border-1 rounded-xl p-1 mt-3'>
+        <div className='flex justify-between items-center border-1 rounded-xl p-1 my-3'>
             <div>
                 <img className='w-12 h-12 border-1 rounded-xl' src={marked.image} alt="" />
             </div>

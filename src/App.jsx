@@ -5,7 +5,7 @@ import Banner from './components/Banner'
 import Footer from './components/Footer'
 import Items from './components/Items'
 import { CiHeart } from "react-icons/ci";
-import FavItem from './components/FavItem'
+import NoFavItem from './components/NoFavItem'
 import { useState } from 'react'
 import MarkedItem from './components/MarkedItem'
 import { RxCross2 } from "react-icons/rx";
@@ -98,18 +98,23 @@ function App() {
           <div className='border-2 border-amber-800 w-1/4  bg-white p-5 rounded-2xl'>
          
 
-            <div className='flex justify-center items-center py-3'>
+            <div className='flex justify-center items-center py-3 border-b-2'>
               <CiHeart size={24} />
               <h1 className='text-2xl font-medium  text-blue-500'>Favourits Items</h1>
             </div>
-            <FavItem></FavItem>
             {
+              favourite.length > 0?(
+                
               favourite.map((marked) => <MarkedItem key={marked.id} marked={marked} handldeRemoveFavourite={handldeRemoveFavourite}></MarkedItem>
 
 
               )
+            
+              ): (<NoFavItem></NoFavItem>)
             }
-            <div className='flex justify-between py-2 mt-5'>
+            
+            
+            <div className='flex justify-between py-2  border-t-2'>
               <h3 className='text-xl'>Total bids Amount</h3>
               <h3 className='font-semibold text-xl'>${amount}</h3>
             </div>
