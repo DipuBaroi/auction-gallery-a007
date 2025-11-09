@@ -78,7 +78,7 @@ function App() {
         <section className='flex gap-5'>
 
           {/* left container */}
-          <div className='border-2 border-blue-500 w-3/4 bg-white p-5 rounded-2xl'>
+          <div className=' w-3/4 bg-white p-5 rounded-2xl'>
 
 
             <div className='grid grid-cols-7 border-1 p-5 rounded-t-2xl  font-bold'>
@@ -95,7 +95,7 @@ function App() {
     
 
           {/* Right container */}
-          <div className='border-2 border-amber-800 w-1/4  bg-white p-5 rounded-2xl'>
+          <div className=' w-1/4  bg-white p-5 rounded-2xl'>
          
 
             <div className='flex justify-center items-center py-3 border-b-2'>
@@ -114,7 +114,7 @@ function App() {
             }
             
             
-            <div className='flex justify-between py-2  border-t-2'>
+            <div className='flex justify-between py-5  border-t-2'>
               <h3 className='text-xl'>Total bids Amount</h3>
               <h3 className='font-semibold text-xl'>${amount}</h3>
             </div>
