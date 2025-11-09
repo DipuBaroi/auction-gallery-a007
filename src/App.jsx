@@ -16,14 +16,27 @@ const [favourite, setFavourit] = useState([])
 
 const [amount, setAmount] = useState(0)
 
+
+
   const handleFavourite = (item) =>{
+    const alreadyMarked = favourite.find((mark)=> mark.id===item.id);
+    if(alreadyMarked){
+      return;
+    }
+    else{
     setFavourit([...favourite, item])
     setAmount(amount + item.currentBidPrice)
-    alert("some one click")
+    alert('Item Added To Your Favourite List')
+    }
   }
 
-  // console.log(favourite);
-  console.log(amount)
+  const handldeRemoveFavourite = (id, CurrentAmount) =>{
+    const remainingItems = favourite.filter((mark)=>mark.id!==id)
+    setAmount(amount-CurrentAmount)
+    setFavourit(remainingItems)
+  }
+
+  
 
 
   return (
@@ -48,7 +61,7 @@ const [amount, setAmount] = useState(0)
                   <h3>Bid Now</h3>
                
               </div>
-            <Items handleFavourite={handleFavourite}></Items>
+            <Items handleFavourite={handleFavourite} favourite={favourite}></Items>
           </div>
 
           {/* Right container */}
@@ -60,7 +73,7 @@ const [amount, setAmount] = useState(0)
               </div>
               <FavItem></FavItem>
               {
-                favourite.map((marked)=><MarkedItem key={marked.id} marked={marked}></MarkedItem>
+                favourite.map((marked)=> <MarkedItem key={marked.id} marked={marked} handldeRemoveFavourite={handldeRemoveFavourite}></MarkedItem> 
             
             
          )

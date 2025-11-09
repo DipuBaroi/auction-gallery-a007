@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Item from './Item';
 
-const Items = ({handleFavourite}) => {
+const Items = ({handleFavourite, favourite}) => {
     
 
     const [items, setItems] =useState([])
@@ -19,7 +19,7 @@ const Items = ({handleFavourite}) => {
             <div className="all-items">
                 
                 {
-                    items.map((item)=><Item key={item.id} item={item} handleFavourite={handleFavourite}></Item>)
+                    items.map((item)=><Item key={item.id} item={item} handleFavourite={handleFavourite} favourite={favourite}></Item>)
                 }
             </div>
         </div>

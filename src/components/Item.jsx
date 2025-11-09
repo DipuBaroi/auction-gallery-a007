@@ -1,8 +1,10 @@
 import React from 'react';
 import { CiHeart } from "react-icons/ci";
+import { AiFillHeart } from "react-icons/ai";
 
-const Item = ({ item, handleFavourite }) => {
-    // console.log(item)
+const Item = ({ item, handleFavourite, favourite }) => {
+    
+    const isMarked = favourite.find((mark)=>mark.id === item.id)
     return (
         <div>
 
@@ -18,7 +20,17 @@ const Item = ({ item, handleFavourite }) => {
 
                 <div>{item.currentBidPrice}</div>
                 <div>{item.timeLeft}</div>
-                <button onClick={() => handleFavourite(item)}><CiHeart size={24} /></button>
+                <button className={isMarked? "cursor-not-allowed" : "cursor-pointer"} onClick={() => handleFavourite(item)} disabled={isMarked}>
+
+                    {/* <CiHeart/> */}
+
+                    {
+                        isMarked?(<AiFillHeart size={24} color='red'/>
+                            
+                        ): (<CiHeart size={24}/>)
+                    }
+                    
+                    </button>
 
 
             </div>
