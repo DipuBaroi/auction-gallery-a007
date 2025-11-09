@@ -8,16 +8,22 @@ import { CiHeart } from "react-icons/ci";
 import FavItem from './components/FavItem'
 import { useState } from 'react'
 import MarkedItem from './components/MarkedItem'
+import { RxCross2 } from "react-icons/rx";
 
 function App() {
 
 const [favourite, setFavourit] = useState([])
 
+const [amount, setAmount] = useState(0)
+
   const handleFavourite = (item) =>{
     setFavourit([...favourite, item])
+    setAmount(amount + item.currentBidPrice)
+    alert("some one click")
   }
 
-  console.log(favourite);
+  // console.log(favourite);
+  console.log(amount)
 
 
   return (
@@ -32,19 +38,7 @@ const [favourite, setFavourit] = useState([])
 
           {/* left container */}
           <div className='border-2 border-blue-500 w-3/4 bg-white p-5 rounded-2xl'>
-            {/* <div className="overflow-x-auto">
-  <table className="table">
-    <thead>
-      <tr>       
-        <th>Items</th>
-        <th className='ml-5'>Current Bid</th>
-        <th className='ml-5'>Time Left</th>
-        <th className='ml-5'>Bid Now</th>
-      </tr>
-    </thead>
-    
-  </table>
-</div> */}
+          
 
               <div className='grid grid-cols-7 border-1 p-5 rounded-t-2xl  font-bold'>
                 <h1 className='col-span-4'>Items</h1>
@@ -66,20 +60,14 @@ const [favourite, setFavourit] = useState([])
               </div>
               <FavItem></FavItem>
               {
-                favourite.map((marked)=><div className='flex border-1 rounded-xl p-1'>
-            <div>{marked.image}</div>
-            <div>
-                <h3>{marked.title}</h3>
-                <h3>{marked.currentBidPrice}</h3>
-                <h3></h3>
-             </div>
-             <button><RxCross2 /></button>
+                favourite.map((marked)=><MarkedItem key={marked.id} marked={marked}></MarkedItem>
             
-         </div>)
+            
+         )
               }  
-            <div className='flex justify-between py-2'>
+            <div className='flex justify-between py-2 mt-5'>
               <h3 className='text-xl'>Total bids Amount</h3>
-              <h3 className='font-semibold text-xl'>$0000</h3>
+              <h3 className='font-semibold text-xl'>${amount}</h3>
             </div>
 
           </div>
